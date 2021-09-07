@@ -1,0 +1,17 @@
+{% extends 'dz_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    good_create
+{% endblock %}
+{% block content %}
+    <h1>good_create.html</h1>
+    <form action="{% url 'create_prodact' %}" method="post">
+        {% csrf_token %}
+       
+        {{ form.as_p }}
+
+        <button type="submit">Добавить продукт</button>
+    </form>
+{% endblock %}
