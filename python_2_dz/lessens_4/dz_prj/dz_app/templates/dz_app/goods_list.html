@@ -1,0 +1,20 @@
+{% extends 'dz_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    goods_list
+{% endblock %}
+{% block content %}
+    <h1>goods_list.html</h1>
+    {% for el in model %}
+        <div>
+            <p>{{ el.title }}</p>
+            <p>{{ el.created_at }}</p>
+            <p>{{ el.price }}</p>
+            <p>{{ el.count }}</p>
+            <p>{{ el.vendor }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+{% endblock %}
